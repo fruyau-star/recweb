@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Landing from './paginas/Landing';
+import Home from './paginas/Home';
 import Certificacoes from './paginas/Certificacoes';
 import Contato from './paginas/Contato';
 import Galeria from './paginas/Galeria';
@@ -12,11 +12,11 @@ import Sobre from './paginas/Sobre';
 function App() {
   return (
     <div className="app">
-      <Header />
+     <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/landing" element={<Landing />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/certificacoes" element={<Certificacoes />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/galeria" element={<Galeria />} />

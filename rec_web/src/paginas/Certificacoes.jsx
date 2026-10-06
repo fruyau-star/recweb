@@ -1,65 +1,61 @@
-import React from 'react';
+import { useState } from 'react';
 
-const Certificacoes = () => {
+function Certificacoes() {
+  const [form, setForm] = useState({
+    nome: '',
+    servico: '',
+    data: '',
+    horario: ''
+  });
+
+  function handleChange(event) {
+    setForm({ ...form, [event.target.name]: event.target.value });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    alert(`Agendamento realizado para ${form.nome}!`);
+  }
+
   return (
-    <div>
-      {/* Cabeçalho */}
-      <header>
-        <h1>DIGITAL PROJECT</h1>
-        <nav>
-          <ul>
-            <li><a href="/">Início</a></li>
-            <li><a href="/galeria">Galeria</a></li>
-            <li><a href="/projetos">Projetos</a></li>
-            <li><a href="/certificacoes">Certificações</a></li>
-            <li><a href="/contato">Contatos</a></li>
-          </ul>
-        </nav>
-      </header>
+    <section className="section page form-page">
+      <div className="form-box">
+        <h1>Agendamento</h1>
+        <form onSubmit={handleSubmit}>
+          <label>Nome
+            <input name="nome" value={form.nome} onChange={handleChange} required />
+          </label>
 
-      {/* Conteúdo principal */}
-      <main>
-        <h2>Certificações da Empresa</h2>
+          <label>Serviço
+            <select name="servico" value={form.servico} onChange={handleChange} required>
+              <option value="">Selecione um serviço</option>
+              <option>Corte Masculino</option>
+              <option>Barba</option>
+              <option>Corte + Barba</option>
+              <option>Sobrancelha</option>
+            </select>
+          </label>
 
-        {/* Certificação 1 */}
-        <section>
-          <h3>Certificação ISO 9001</h3>
-          <p>
-            Reconhecimento internacional pela qualidade dos processos e gestão
-            eficiente.
-          </p>
-        </section>
+          <label>Data
+            <input type="date" name="data" value={form.data} onChange={handleChange} required />
+          </label>
 
-        {/* Certificação 2 */}
-        <section>
-          <h3>Certificação Ambiental</h3>
-          <p>
-            Garantia de práticas sustentáveis e respeito ao meio ambiente em
-            todos os projetos.
-          </p>
-        </section>
+          <label>Horário
+            <select name="horario" value={form.horario} onChange={handleChange} required>
+              <option value="">Selecione o horário</option>
+              <option>09:00</option>
+              <option>10:00</option>
+              <option>14:00</option>
+              <option>15:00</option>
+              <option>16:00</option>
+            </select>
+          </label>
 
-        {/* Certificação 3 */}
-        <section>
-          <h3>Certificação de Segurança</h3>
-          <p>
-            Cumprimento das normas de segurança e proteção em obras e
-            construções.
-          </p>
-        </section>
-      </main>
-
-      {/* Rodapé */}
-      <footer>
-        <p>Endereço: Rua Exemplo, 123 - São Paulo/SP</p>
-        <p>Telefone: (11) 3333-2222</p>
-        <p>Email: exemplo@gmail.com</p>
-        <div>
-          <span>Facebook | Twitter | LinkedIn | Pinterest</span>
-        </div>
-      </footer>
-    </div>
+          <button className="btn" type="submit">Confirmar agendamento</button>
+        </form>
+      </div>
+    </section>
   );
-};
+}
 
 export default Certificacoes;
