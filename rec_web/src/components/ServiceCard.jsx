@@ -8,7 +8,7 @@ function ServiceCard({ id, nome, descricao, preco, imagem }) {
         <h3>{nome}</h3>
         <p>{descricao}</p>
         <strong>R$ {preco}</strong>
-        <Link to={`/servicos/${id}`} className="btn btn-small">Ver detalhes</Link>
+        <Link to={`/projetos/${id}`} className="btn btn-small">Ver detalhes</Link>
       </div>
     </article>
   );

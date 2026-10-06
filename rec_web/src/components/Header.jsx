@@ -1,18 +1,18 @@
-import { NavLink, Link } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+ 
 function Header() {
-  return (
-    <header className="header">
-      <Link to="/" className="logo">BARBEARIA ESTILO</Link>
-      <nav>
-        <NavLink to="/" end>Home</NavLink>
-        <NavLink to="/servicos">Serviços</NavLink>
-        <NavLink to="/agendamento">Agendamento</NavLink>
-        <NavLink to="/contato">Contato</NavLink>
-      </nav>
-      <Link to="/agendamento" className="btn btn-small">Agendar agora</Link>
-    </header>
-  );
+return (
+<header>
+<nav>
+<Link to="/">Home</Link>
+<Link to="/sobre">Sobre</Link>
+<Link to="/projetos">Projetos</Link>
+<Link to="/galeria">Galeria</Link>
+<Link to="/certificacoes">Certificações</Link>
+<Link to="/contato">Contato</Link>
+</nav>
+</header>
+);
 }
-
+ 
 export default Header;

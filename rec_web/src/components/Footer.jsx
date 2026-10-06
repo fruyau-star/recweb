@@ -1,9 +1,9 @@
 function Footer() {
-    return (
-      <footer className="footer">
-        <p>© 2026 Barbearia Estilo — Todos os direitos reservados.</p>
-      </footer>
-    );
+  return (
+  <footer>
+  <p>Meu primeiro site React</p>
+  </footer>
+  );
   }
-  
+   
   export default Footer;

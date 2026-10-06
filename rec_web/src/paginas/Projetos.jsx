@@ -1,25 +1,22 @@
-import ServiceCard from '../components/ServiceCard';
+import React from 'react';
 
-const servicos = [
-  { id: 1, nome: 'Corte Masculino', descricao: 'Corte tradicional ou moderno.', preco: '40,00', imagem: '/corte.jpg' },
-  { id: 2, nome: 'Barba', descricao: 'Barba desenhada e acabamento.', preco: '35,00', imagem: '/barba.jpg' },
-  { id: 3, nome: 'Corte + Barba', descricao: 'Combo completo para seu visual.', preco: '65,00', imagem: '/combo.jpg' },
-  { id: 4, nome: 'Sobrancelha', descricao: 'Design e acabamento.', preco: '20,00', imagem: '/sobrancelha.jpg' },
-  { id: 5, nome: 'Outros Serviços', descricao: 'Consulte outras opções.', preco: '30,00', imagem: '/outros.jpg' }
-];
-
-function Servicos() {
-  return (
-    <section className="section page">
-      <h1>Nossos Serviços</h1>
-      <p>Escolha um serviço para conhecer os detalhes.</p>
-      <div className="services-grid">
-        {servicos.map((servico) => (
-          <ServiceCard key={servico.id} {...servico} />
-        ))}
-      </div>
-    </section>
-  );
-}
+const Projetos = () => {
+    return (
+        <div>
+            <h1>Sobre o Projeto</h1>
+            <p>Este projeto visa...</p>
+            
+            <h2>Missões</h2>
+            <ul>
+                <li>Missão 1: Descrição da missão 1.</li>
+                <li>Missão 2: Descrição da missão 2.</li>
+                <li>Missão 3: Descrição da missão 3.</li>
+            </ul>
+            
+            <h2>Objetivos</h2>
+            <p>Nossos objetivos incluem...</p>
+        </div>
+    );
+};
 
 export default Projetos;
